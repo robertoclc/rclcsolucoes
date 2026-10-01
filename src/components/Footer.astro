@@ -6,23 +6,73 @@
       class="footer-logo"
     />
 
-    <div class="footer-links">
-      <a
-        href="https://wa.me/5521993548498"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        (21) 99354-8498
-      </a>
+```
+<div class="footer-links">
+  <a
+    href="https://wa.me/5521993548498"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    (21) 99354-8498
+  </a>
 
-      <a href="mailto:contato@rclcsolucoes.com.br">
-        contato@rclcsolucoes.com.br
-      </a>
-    </div>
+  <a href="mailto:contato@rclcsolucoes.com.br">
+    contato@rclcsolucoes.com.br
+  </a>
+</div>
 
-    <div class="footer-copy">
-      © {new Date().getFullYear()} RCLC – Soluções Gerenciais
-    </div>
+<div class="footer-social">
+  <a
+    href="https://www.facebook.com/rclc.solucoes.gerenciais"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook da RCLC"
+  >
+    <img src="/images/facebook.png" alt="" />
+  </a>
+
+  <a
+    href="https://www.instagram.com/rclcsolucoes/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram da RCLC"
+  >
+    <img src="/images/instagram.png" alt="" />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/rclcsolucoes"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn da RCLC"
+  >
+    <img src="/images/linkedin.png" alt="" />
+  </a>
+
+  <a
+    href="https://x.com/RCLCSolucoes_2"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="X da RCLC"
+  >
+    <img src="/images/x.png" alt="" />
+  </a>
+
+  <a
+    href="https://www.youtube.com/@RCLCSolucoes"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="YouTube da RCLC"
+  >
+    <img src="/images/youtube.png" alt="" />
+  </a>
+</div>
+
+<div class="footer-copy">
+  © {new Date().getFullYear()} RCLC – Soluções Gerenciais
+</div>
+```
+
   </div>
 </footer>
 
@@ -70,6 +120,34 @@
     color: #ffffff;
   }
 
+  .footer-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .footer-social a:hover {
+    transform: translateY(-2px);
+    opacity: 0.8;
+  }
+
+  .footer-social img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
   .footer-copy {
     color: #aebccd;
     font-size: 0.72rem;
@@ -78,7 +156,7 @@
     text-align: right;
   }
 
-  @media (max-width: 850px) {
+  @media (max-width: 1000px) {
     .footer-main {
       flex-wrap: wrap;
       justify-content: center;
@@ -103,6 +181,10 @@
     .footer-links {
       flex-direction: column;
       gap: 4px;
+    }
+
+    .footer-social {
+      gap: 12px;
     }
 
     .footer-logo {
