@@ -1,0 +1,116 @@
+<footer class="site-footer">
+  <div class="container footer-main">
+    <img
+      src="/logo-rclc.png"
+      alt="RCLC Soluções Gerenciais"
+      class="footer-logo"
+    />
+
+    <div class="footer-links">
+      <a
+        href="https://wa.me/5521993548498"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        (21) 99354-8498
+      </a>
+
+      <a href="mailto:contato@rclcsolucoes.com.br">
+        contato@rclcsolucoes.com.br
+      </a>
+    </div>
+
+    <div class="footer-copy">
+      © {new Date().getFullYear()} RCLC – Soluções Gerenciais
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: 0;
+    padding: 14px 0;
+    background: #10243f;
+    color: #ffffff;
+  }
+
+  .container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .footer-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  .footer-logo {
+    display: block;
+    width: 120px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .footer-links a {
+    color: #dce7f4;
+    font-size: 0.82rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .footer-links a:hover {
+    color: #ffffff;
+  }
+
+  .footer-copy {
+    color: #aebccd;
+    font-size: 0.72rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  @media (max-width: 850px) {
+    .footer-main {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-copy {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .site-footer {
+      padding: 12px 0;
+    }
+
+    .footer-main {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-links {
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .footer-logo {
+      width: 105px;
+    }
+
+    .footer-copy {
+      width: auto;
+    }
+  }
+</style>

@@ -1,0 +1,103 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Página não encontrada | RCLC – Soluções Gerenciais"
+  description="A página que você procura não foi encontrada."
+>
+  <Header />
+
+  <main class="error-page">
+    <div class="container">
+      <p class="error-number">404</p>
+
+      <h1>Página não encontrada</h1>
+
+      <p class="error-text">
+        A página que você está procurando não existe ou pode ter sido
+        movida.
+      </p>
+
+      <a href="/" class="button">
+        Voltar para o início
+      </a>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .error-page {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background: #f7fafd;
+  }
+
+  .container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .error-number {
+    margin: 0;
+    color: #1677d2;
+    font-size: clamp(5rem, 15vw, 9rem);
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+  }
+
+  h1 {
+    margin: 15px 0 0;
+    color: #10243f;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .error-text {
+    max-width: 520px;
+    margin: 15px auto 0;
+    color: #637287;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    margin-top: 30px;
+    padding: 0 24px;
+    border-radius: 8px;
+    background: #1677d2;
+    color: #ffffff;
+    font-weight: 600;
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .button:hover {
+    background: #1268b9;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 600px) {
+    .error-page {
+      min-height: 500px;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+    }
+  }
+</style>

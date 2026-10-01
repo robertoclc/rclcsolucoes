@@ -1,0 +1,145 @@
+<section class="hero">
+  <div class="container hero-content">
+    <p class="eyebrow">RCLC – SOLUÇÕES GERENCIAIS</p>
+
+    <h1>
+      Tecnologia, presença digital
+      <span> e soluções para sua empresa.</span>
+    </h1>
+
+    <p class="hero-description">
+      Na RCLC, reunimos soluções gerenciais e digitais para ajudar sua
+      empresa a organizar processos, fortalecer sua presença profissional
+      e manter suas informações atualizadas.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#servicos" class="button button-primary">
+        Conheça nossas soluções
+      </a>
+
+      <a href="#contato" class="button button-secondary">
+        Fale com a RCLC
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 105px 0 115px;
+    background: linear-gradient(135deg, #f1f7fd 0%, #ffffff 70%);
+  }
+
+  .container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .hero-content {
+    max-width: 1120px;
+  }
+
+  .eyebrow {
+    margin: 0 0 20px;
+    color: #1677d2;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+  }
+
+  .hero h1 {
+    max-width: 850px;
+    margin: 0;
+    color: #10243f;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+  }
+
+  .hero h1 span {
+    display: inline;
+    color: #1677d2;
+  }
+
+  .hero-description {
+    max-width: 680px;
+    margin: 26px 0 0;
+    color: #56667c;
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+  }
+
+  .button-primary {
+    background: #1677d2;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(22, 119, 210, 0.18);
+  }
+
+  .button-primary:hover {
+    background: #1268b9;
+  }
+
+  .button-secondary {
+    border: 1px solid #cbd7e5;
+    background: #ffffff;
+    color: #20334d;
+  }
+
+  .button-secondary:hover {
+    border-color: #1677d2;
+    color: #1677d2;
+  }
+
+  @media (max-width: 800px) {
+    .hero {
+      padding: 80px 0 85px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .eyebrow {
+      font-size: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 1.35rem;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
+</style>

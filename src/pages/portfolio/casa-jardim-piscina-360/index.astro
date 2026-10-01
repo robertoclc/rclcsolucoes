@@ -1,0 +1,250 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+
+const title = "Casa Jardim Piscina 360 | RCLC – Soluções Gerenciais";
+
+const description =
+  "Conheça o projeto Casa Jardim Piscina 360 desenvolvido pela RCLC – Soluções Gerenciais.";
+---
+
+<Layout title={title} description={description}>
+  <div class="page">
+    <Header />
+
+    <main>
+      <section class="project-hero">
+        <div class="container">
+          <a href="/#portfolio" class="back-link">
+            ← Voltar para o portfólio
+          </a>
+
+          <p class="section-label">PROJETO</p>
+
+          <h1>Casa Jardim Piscina 360</h1>
+
+          <p class="intro">
+            Projeto digital para apresentação de espaço, informações e
+            experiência visual.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-content">
+        <div class="container project-grid">
+
+          <div class="project-image">
+            <img
+              src="/portfolio/casa-jardim-piscina-360.png"
+              alt="Casa Jardim Piscina 360"
+            />
+          </div>
+
+          <div class="project-info">
+            <span class="category">SOLUÇÃO DIGITAL</span>
+
+            <h2>Sobre o projeto</h2>
+
+            <p>
+              O Casa Jardim Piscina 360 é um projeto digital desenvolvido
+              para apresentar um espaço de forma visual, organizada e
+              profissional.
+            </p>
+
+            <p>
+              A solução valoriza a experiência de apresentação, reunindo
+              informações e elementos visuais para facilitar a compreensão
+              e o interesse do público.
+            </p>
+
+            <a href="/#contato" class="button">
+              Fale com a RCLC
+            </a>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 0 0 auto;
+  }
+
+  .container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .project-hero {
+    padding: 20px 0 18px;
+    background: linear-gradient(135deg, #f1f7fd 0%, #ffffff 70%);
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #637287;
+    font-size: 0.82rem;
+    font-weight: 500;
+  }
+
+  .back-link:hover {
+    color: #1677d2;
+  }
+
+  .section-label {
+    margin: 0 0 5px;
+    color: #1677d2;
+    font-size: 1.4rem;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+  }
+
+  h1 {
+    margin: 0;
+    color: #10243f;
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+  }
+
+  .intro {
+    max-width: 680px;
+    margin: 7px 0 0;
+    color: #637287;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .project-content {
+    padding: 25px 0 20px;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .project-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 205px;
+    padding: 18px;
+    border: 1px solid #e3eaf2;
+    border-radius: 14px;
+    background: #f6f9fc;
+  }
+
+  .project-image img {
+    display: block;
+    width: 62%;
+    max-width: 225px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .project-info {
+    max-width: 560px;
+  }
+
+  .category {
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #1677d2;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  h2 {
+    margin: 0;
+    color: #10243f;
+    font-size: 1.45rem;
+    line-height: 1.2;
+  }
+
+  .project-info p {
+    margin: 9px 0 0;
+    color: #637287;
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    margin-top: 14px;
+    padding: 0 19px;
+    border-radius: 7px;
+    background: #1677d2;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 5px 14px rgba(22, 119, 210, 0.15);
+  }
+
+  .button:hover {
+    background: #1268b9;
+  }
+
+  :global(.site-footer) {
+    flex-shrink: 0;
+    margin-top: 0 !important;
+  }
+
+  @media (max-width: 800px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+
+    .project-image {
+      min-height: 190px;
+    }
+
+    .project-image img {
+      width: 52%;
+      max-width: 210px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      width: min(100% - 30px, 1120px);
+    }
+
+    .project-hero {
+      padding: 18px 0 16px;
+    }
+
+    .project-content {
+      padding: 22px 0 25px;
+    }
+
+    .project-image {
+      min-height: 180px;
+    }
+
+    .project-image img {
+      width: 55%;
+    }
+  }
+</style>

@@ -1,0 +1,116 @@
+<section id="sobre" class="section section-light">
+  <div class="container about">
+    <div>
+      <p class="section-label">SOBRE A RCLC</p>
+
+      <h2>
+        Soluções gerenciais e digitais para transformar necessidades em
+        projetos.
+      </h2>
+    </div>
+
+    <div class="about-text">
+      <p>
+        A RCLC reúne experiência em gestão, organização e soluções digitais
+        para ajudar empresas e profissionais a transformar necessidades em
+        soluções práticas.
+      </p>
+
+      <p>
+        Nosso trabalho combina consultoria empresarial, presença digital,
+        materiais digitais e projetos personalizados, sempre considerando
+        o contexto e os objetivos de cada cliente.
+      </p>
+
+      <a href="#contato" class="text-link">
+        Conheça a RCLC →
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    min-height: 671px;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .section-light {
+    background: #f6f9fc;
+  }
+
+  .container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .section-label {
+    margin: 0 0 12px;
+    color: #1677d2;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+  }
+
+  .section h2 {
+    max-width: 760px;
+    margin: 0;
+    color: #10243f;
+    font-size: 1.25rem;
+    line-height: 1.35;
+    font-weight: 500;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: start;
+  }
+
+  .about-text {
+    color: #596a80;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .about-text p {
+    margin: 0 0 16px;
+  }
+
+  .text-link {
+    color: #1677d2;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .text-link:hover {
+    color: #1268b9;
+  }
+
+  @media (max-width: 800px) {
+    .section {
+      min-height: auto;
+      padding: 45px 0;
+      display: block;
+    }
+
+    .about {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      width: min(100% - 30px, 1120px);
+    }
+
+    .section-label {
+      font-size: 2rem;
+    }
+  }
+</style>
