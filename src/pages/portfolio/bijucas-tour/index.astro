@@ -1,73 +1,76 @@
----
+﻿---
+
 import Layout from "../../../layouts/Layout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 
-const title = "Bijucas Tour | RCLC – Soluções Gerenciais";
+const title =
+"Bijucas Tour | Presença Digital e Turismo | RCLC – Soluções Gerenciais";
 
 const description =
-  "Conheça o projeto Bijucas Tour desenvolvido pela RCLC – Soluções Gerenciais.";
----
+"Conheça o projeto Bijucas Tour, desenvolvido pela RCLC para apresentação profissional de serviços e experiências de turismo com presença digital organizada.";
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <Layout title={title} description={description}>
   <div class="page">
     <Header />
 
-    <main>
-      <section class="project-hero">
-        <div class="container">
-          <a href="/#portfolio" class="back-link">
-            ← Voltar para o portfólio
-          </a>
+```
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <a href="/#portfolio" class="back-link">
+        ← Voltar para o portfólio
+      </a>
 
-          <p class="section-label">PROJETO</p>
+      <p class="section-label">PROJETO</p>
 
-          <h1>Bijucas Tour</h1>
+      <h1>Bijucas Tour</h1>
 
-          <p class="intro">
-            Projeto digital voltado para apresentação de serviços
-            e experiências relacionadas ao turismo.
-          </p>
-        </div>
-      </section>
+      <p class="intro">
+        Projeto digital voltado para apresentação de serviços
+        e experiências relacionadas ao turismo.
+      </p>
+    </div>
+  </section>
 
-      <section class="project-content">
-        <div class="container project-grid">
+  <section class="project-content">
+    <div class="container project-grid">
+      <div class="project-image">
+        <img
+          src="/portfolio/bijucas-tour.png"
+          alt="Bijucas Tour"
+        />
+      </div>
 
-          <div class="project-image">
-            <img
-              src="/portfolio/bijucas-tour.png"
-              alt="Bijucas Tour"
-            />
-          </div>
+      <div class="project-info">
+        <span class="category">PRESENÇA DIGITAL</span>
 
-          <div class="project-info">
-            <span class="category">PRESENÇA DIGITAL</span>
+        <h2>Sobre o projeto</h2>
 
-            <h2>Sobre o projeto</h2>
+        <p>
+          O Bijucas Tour é um projeto digital desenvolvido pela RCLC
+          para apresentar serviços e experiências relacionadas ao
+          turismo de forma organizada e profissional.
+        </p>
 
-            <p>
-              O Bijucas Tour é um projeto digital desenvolvido pela RCLC
-              para apresentar serviços e experiências relacionadas ao
-              turismo de forma organizada e profissional.
-            </p>
+        <p>
+          A solução valoriza a apresentação das informações e a
+          experiência do usuário, facilitando o acesso aos conteúdos
+          e aos serviços oferecidos.
+        </p>
 
-            <p>
-              A solução valoriza a apresentação das informações e a
-              experiência do usuário, facilitando o acesso aos conteúdos
-              e aos serviços oferecidos.
-            </p>
+        <a href="/#contato" class="button">
+          Fale com a RCLC
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
 
-            <a href="/#contato" class="button">
-              Fale com a RCLC
-            </a>
-          </div>
+<Footer />
+```
 
-        </div>
-      </section>
-    </main>
-
-    <Footer />
   </div>
 </Layout>
 

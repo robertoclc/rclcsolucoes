@@ -1,73 +1,78 @@
 ---
+
 import Layout from "../../../layouts/Layout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 
-const title = "Bistrô dos Sabores | RCLC – Soluções Gerenciais";
+const title =
+"Bistrô dos Sabores | Presença Digital e Gastronomia | RCLC – Soluções Gerenciais";
 
 const description =
-  "Conheça o projeto Bistrô dos Sabores desenvolvido pela RCLC – Soluções Gerenciais.";
----
+"Conheça o projeto Bistrô dos Sabores, desenvolvido pela RCLC para fortalecer a presença digital, apresentar produtos e facilitar a comunicação com clientes.";
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <Layout title={title} description={description}>
   <div class="page">
     <Header />
 
-    <main>
-      <section class="project-hero">
-        <div class="container">
-          <a href="/#portfolio" class="back-link">
-            ← Voltar para o portfólio
-          </a>
+```
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <a href="/#portfolio" class="back-link">
+        ← Voltar para o portfólio
+      </a>
 
-          <p class="section-label">PROJETO</p>
+      <p class="section-label">PROJETO</p>
 
-          <h1>Bistrô dos Sabores</h1>
+      <h1>Bistrô dos Sabores</h1>
 
-          <p class="intro">
-            Solução digital para divulgação de produtos e comunicação com
-            clientes.
-          </p>
-        </div>
-      </section>
+      <p class="intro">
+        Solução digital para divulgação de produtos e comunicação com
+        clientes.
+      </p>
+    </div>
+  </section>
 
-      <section class="project-content">
-        <div class="container project-grid">
+  <section class="project-content">
+    <div class="container project-grid">
 
-          <div class="project-image">
-            <img
-              src="/portfolio/bistro-dos-sabores.png"
-              alt="Bistrô dos Sabores"
-            />
-          </div>
+      <div class="project-image">
+        <img
+          src="/portfolio/bistro-dos-sabores.png"
+          alt="Bistrô dos Sabores"
+        />
+      </div>
 
-          <div class="project-info">
-            <span class="category">PRESENÇA DIGITAL</span>
+      <div class="project-info">
+        <span class="category">PRESENÇA DIGITAL</span>
 
-            <h2>Sobre o projeto</h2>
+        <h2>Sobre o projeto</h2>
 
-            <p>
-              O Bistrô dos Sabores é um projeto desenvolvido pela RCLC para
-              fortalecer a apresentação digital do negócio e facilitar a
-              comunicação com seus clientes.
-            </p>
+        <p>
+          O Bistrô dos Sabores é um projeto desenvolvido pela RCLC para
+          fortalecer a apresentação digital do negócio e facilitar a
+          comunicação com seus clientes.
+        </p>
 
-            <p>
-              A solução foi pensada para organizar informações, apresentar
-              produtos de forma atrativa e criar uma presença digital
-              profissional.
-            </p>
+        <p>
+          A solução foi pensada para organizar informações, apresentar
+          produtos de forma atrativa e criar uma presença digital
+          profissional.
+        </p>
 
-            <a href="/#contato" class="button">
-              Fale com a RCLC
-            </a>
-          </div>
+        <a href="/#contato" class="button">
+          Fale com a RCLC
+        </a>
+      </div>
 
-        </div>
-      </section>
-    </main>
+    </div>
+  </section>
+</main>
 
-    <Footer />
+<Footer />
+```
+
   </div>
 </Layout>
 
@@ -205,10 +210,6 @@ const description =
     background: #1268b9;
   }
 
-  /*
-   * Mantém o rodapé inteiro visível e impede
-   * que ele seja comprimido pelo flex da página.
-   */
   :global(.site-footer) {
     flex-shrink: 0;
     margin-top: 0 !important;
