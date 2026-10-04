@@ -3,18 +3,13 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
-import Services from "../components/Services.astro";
-import Portfolio from "../components/Portfolio.astro";
-import About from "../components/About.astro";
-import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
-import "../styles/global.css";
 
 const title =
-"RCLC – Soluções Gerenciais | Tecnologia e Presença Digital";
+  "RCLC – Soluções Gerenciais | Tecnologia e Presença Digital";
 
 const description =
-"A RCLC oferece soluções gerenciais, tecnologia e presença digital para empresas que buscam organização, comunicação profissional e resultados.";
+  "A RCLC oferece soluções gerenciais, tecnologia e presença digital para empresas que buscam organização, comunicação profissional e resultados.";
 ---
 
 <Layout title={title} description={description}>
@@ -22,15 +17,6 @@ const description =
 
   <main>
     <Hero />
-
-<Services />
-
-<Portfolio />
-
-<About />
-
-<Contact />
-
   </main>
 
   <Footer />

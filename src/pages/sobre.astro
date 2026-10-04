@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import About from "../components/About.astro";
+import Footer from "../components/Footer.astro";
+
+const title = "Sobre a RCLC – Soluções Gerenciais";
+
+const description =
+  "Conheça a RCLC – Soluções Gerenciais e nosso trabalho com gestão, organização, presença digital e soluções personalizadas.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+
+  <main>
+    <About />
+  </main>
+
+  <Footer />
+</Layout>

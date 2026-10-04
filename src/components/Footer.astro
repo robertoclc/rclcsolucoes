@@ -1,4 +1,4 @@
-<footer class="site-footer">
+﻿<footer class="site-footer">
   <div class="container footer-main">
     <img
       src="/logo-rclc.webp"
@@ -8,71 +8,70 @@
       height="423"
     />
 
-<div class="footer-links">
-  <a
-    href="https://wa.me/5521993548498"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    (21) 99354-8498
-  </a>
+    <div class="footer-links">
+      <a
+        href="https://wa.me/5521993548498"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        (21) 99354-8498
+      </a>
 
-  <a href="mailto:contato@rclcsolucoes.com.br">
-    contato@rclcsolucoes.com.br
-  </a>
-</div>
+      <a href="mailto:contato@rclcsolucoes.com.br">
+        contato@rclcsolucoes.com.br
+      </a>
+    </div>
 
-<div class="footer-social">
-  <a
-    href="https://www.facebook.com/rclc.solucoes.gerenciais"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Facebook da RCLC"
-  >
-    <img src="/images/facebook.png" alt="" />
-  </a>
+    <div class="footer-social">
+      <a
+        href="https://www.facebook.com/rclc.solucoes.gerenciais"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook da RCLC"
+      >
+        <img src="/images/facebook.png" alt="" />
+      </a>
 
-  <a
-    href="https://www.instagram.com/rclcsolucoes/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram da RCLC"
-  >
-    <img src="/images/instagram.png" alt="" />
-  </a>
+      <a
+        href="https://www.instagram.com/rclcsolucoes/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram da RCLC"
+      >
+        <img src="/images/instagram.png" alt="" />
+      </a>
 
-  <a
-    href="https://www.linkedin.com/in/rclcsolucoes"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn da RCLC"
-  >
-    <img src="/images/linkedin.png" alt="" />
-  </a>
+      <a
+        href="https://www.linkedin.com/in/rclcsolucoes"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn da RCLC"
+      >
+        <img src="/images/linkedin.png" alt="" />
+      </a>
 
-  <a
-    href="https://x.com/RCLCSolucoes_2"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="X da RCLC"
-  >
-    <img src="/images/x.png" alt="" />
-  </a>
+      <a
+        href="https://x.com/RCLCSolucoes_2"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="X da RCLC"
+      >
+        <img src="/images/x.png" alt="" />
+      </a>
 
-  <a
-    href="https://www.youtube.com/@RCLCSolucoes"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="YouTube da RCLC"
-  >
-    <img src="/images/youtube.png" alt="" />
-  </a>
-</div>
+      <a
+        href="https://www.youtube.com/@RCLCSolucoes"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="YouTube da RCLC"
+      >
+        <img src="/images/youtube.png" alt="" />
+      </a>
+    </div>
 
-<div class="footer-copy">
-  © 2026 RCLC – Soluções Gerenciais
-</div>
-
+    <div class="footer-copy">
+      © 2026 RCLC – Soluções Gerenciais
+    </div>
   </div>
 </footer>
 
@@ -136,7 +135,9 @@
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
   }
 
   .footer-social a:hover {
@@ -173,30 +174,55 @@
 
   @media (max-width: 650px) {
     .site-footer {
-      padding: 12px 0;
+      padding: 10px 0;
     }
 
     .footer-main {
+      display: flex;
       flex-direction: column;
-      gap: 8px;
-    }
-
-    .footer-links {
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .footer-social {
-      gap: 12px;
+      align-items: center;
+      gap: 5px;
     }
 
     .footer-logo {
-      width: 105px;
+      display: none;
+    }
+
+    .footer-links {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .footer-links a {
+      min-height: 20px;
+      font-size: 0.58rem;
+      line-height: 1;
+    }
+
+    .footer-social {
+      gap: 6px;
+    }
+
+    .footer-social a {
+      width: 23px;
+      height: 23px;
+    }
+
+    .footer-social img {
+      width: 19px;
+      height: 19px;
     }
 
     .footer-copy {
       width: auto;
+      font-size: 0.65rem;
+      line-height: 1.2;
+      text-align: center;
     }
   }
 </style>
-

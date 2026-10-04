@@ -21,6 +21,9 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -30,6 +33,10 @@ a {
 
 img {
   max-width: 100%;
+}
+
+main {
+  flex: 1;
 }
 
 .container {
@@ -89,7 +96,7 @@ nav a:hover {
 /* Footer */
 
 .site-footer {
-  margin-top: 80px;
+  margin-top: 0;
   padding: 55px 0 25px;
   background: #10243f;
   color: #ffffff;
@@ -181,6 +188,9 @@ nav a:hover {
     font-size: 0.8rem;
   }
 
+  #sobre,
+  #servicos,
+  #portfolio,
   #contato {
     scroll-margin-top: 210px;
   }
