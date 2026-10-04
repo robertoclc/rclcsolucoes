@@ -181,6 +181,10 @@ nav a:hover {
     font-size: 0.8rem;
   }
 
+  #contato {
+    scroll-margin-top: 210px;
+  }
+
   .footer-inner {
     flex-direction: column;
   }
