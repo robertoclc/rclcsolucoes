@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://www.rclcsolucoes.com.br/sitemap-0.xml
+Sitemap: https://www.rclcsolucoes.com.br/sitemap.xml
