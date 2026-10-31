@@ -1,12 +1,23 @@
 ﻿<footer class="site-footer">
   <div class="container footer-main">
-    <img
-      src="/logo-rclc.webp"
-      alt="RCLC Soluções Gerenciais"
-      class="footer-logo"
-      width="1016"
-      height="423"
-    />
+    <a href="/" aria-label="Home RCLC">
+      <img
+        src="/logo-rclc.webp"
+        alt="RCLC Soluções Gerenciais"
+        class="footer-logo"
+        width="1016"
+        height="423"
+      />
+    </a>
+
+    <!-- Navegação interna para autoridade de SEO -->
+    <nav class="footer-nav" aria-label="Navegação do Rodapé">
+      <a href="/sobre/">Sobre</a>
+      <a href="/servicos/">Serviços</a>
+      <a href="/portfolio/">Portfólio</a>
+      <a href="/portfolio/cuide-me/">Cuide.me</a>
+      <a href="/contato/">Contato</a>
+    </nav>
 
     <div class="footer-links">
       <a
@@ -92,7 +103,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
+    gap: 20px;
   }
 
   .footer-logo {
@@ -102,10 +113,29 @@
     flex-shrink: 0;
   }
 
+  .footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .footer-nav a {
+    color: #dce7f4;
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+
   .footer-links {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
   }
 
   .footer-links a {
@@ -116,6 +146,7 @@
     font-size: 0.82rem;
     font-weight: 500;
     white-space: nowrap;
+    text-decoration: none;
   }
 
   .footer-links a:hover {
@@ -166,6 +197,11 @@
       justify-content: center;
     }
 
+    .footer-nav {
+      width: 100%;
+      justify-content: center;
+    }
+
     .footer-copy {
       width: 100%;
       text-align: center;
@@ -181,11 +217,16 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 5px;
+      gap: 8px;
     }
 
     .footer-logo {
       display: none;
+    }
+
+    .footer-nav {
+      gap: 10px;
+      font-size: 0.7rem;
     }
 
     .footer-links {
