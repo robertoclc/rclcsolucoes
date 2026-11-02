@@ -18,11 +18,11 @@
 
       <p>
         Nosso trabalho combina consultoria empresarial, presença digital,
-        materiais digitais e projetos personalizados, sempre considerando
-        o contexto e os objetivos de cada cliente.
+        materiais digitais e projetos personalizados, sempre considerando o
+        contexto e os objetivos de cada cliente.
       </p>
 
-      <a href="/contato" class="text-link">
+      <a href="/contato/" class="text-link">
         Conheça a RCLC →
       </a>
     </div>
@@ -31,9 +31,8 @@
 
 <style>
   .section {
-    height: 400px;
-    box-sizing: border-box;
-    padding: 60px 0 45px;
+    min-height: 520px;
+    padding: 25px 0 50px;
     display: flex;
     align-items: flex-start;
   }
@@ -49,7 +48,7 @@
 
   .section-label {
     margin: 0 0 12px;
-    color: #1268b9;
+    color: #1677d2;
     font-size: clamp(2rem, 4vw, 3rem);
     line-height: 1.1;
     font-weight: 700;
@@ -83,35 +82,25 @@
   }
 
   .text-link {
-    color: #1268b9;
+    color: #1677d2;
     font-size: 0.9rem;
     font-weight: 600;
   }
 
   .text-link:hover {
-    color: #0f579c;
+    color: #1268b9;
   }
 
   @media (max-width: 800px) {
     .section {
-      height: auto;
-      min-height: 0;
-      padding: 30px 0 20px;
+      min-height: auto;
+      padding: 45px 0;
       display: block;
     }
 
     .about {
       grid-template-columns: 1fr;
-      gap: 18px;
-    }
-
-    .about-text {
-      font-size: 0.9rem;
-      line-height: 1.45;
-    }
-
-    .about-text p {
-      margin: 0 0 10px;
+      gap: 30px;
     }
   }
 
@@ -121,27 +110,7 @@
     }
 
     .section-label {
-      margin-bottom: 10px;
-      font-size: 1.7rem;
-      line-height: 1.05;
-    }
-
-    .section h2 {
-      font-size: 1.15rem;
-      line-height: 1.3;
-    }
-
-    .about-text {
-      font-size: 0.88rem;
-      line-height: 1.4;
-    }
-
-    .about-text p {
-      margin-bottom: 8px;
-    }
-
-    .text-link {
-      font-size: 0.86rem;
+      font-size: 2rem;
     }
   }
 </style>
