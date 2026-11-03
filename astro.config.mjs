@@ -6,5 +6,8 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://rclcsolucoes.com.br",
+  build: {
+    format: "file",
+  },
   integrations: [sitemap()],
 });
