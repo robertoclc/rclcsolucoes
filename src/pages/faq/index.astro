@@ -3,10 +3,11 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 
-const title = "FAQ – Perguntas Frequentes | RCLC Soluções Gerenciais";
+const title =
+  "FAQ – Perguntas Frequentes sobre Google, Sites e Presença Digital | RCLC";
 
 const description =
-  "Tire suas dúvidas sobre presença digital, Perfil da Empresa no Google, criação de sites, identidade visual e soluções da RCLC para empresas.";
+  "Tire suas dúvidas sobre Perfil da Empresa no Google, Google Meu Negócio, Google Maps, criação e atualização de sites, identidade visual e soluções digitais da RCLC.";
 
 const faqGroups = [
   {
@@ -24,9 +25,39 @@ const faqGroups = [
           "O primeiro passo é manter o Perfil da Empresa no Google completo e atualizado, com informações corretas, telefone, endereço, horário de funcionamento, fotos e descrição dos serviços. Também é importante acompanhar as avaliações e manter uma comunicação consistente com os clientes.",
       },
       {
-        question: "Por que é importante manter o Perfil da Empresa no Google atualizado?",
+        question: "O que é o Perfil da Empresa no Google?",
         answer:
-          "Informações desatualizadas podem gerar dúvidas e até fazer com que potenciais clientes desistam de entrar em contato. Manter telefone, endereço, horários, fotos e serviços atualizados facilita a localização da empresa e melhora a experiência de quem pesquisa.",
+          "O Perfil da Empresa no Google é uma ferramenta gratuita que permite apresentar informações comerciais nas pesquisas do Google e no Google Maps. Nele, sua empresa pode exibir endereço, telefone, horário de funcionamento, fotos, serviços, avaliações e outras informações importantes para os clientes.",
+      },
+      {
+        question: "Google Meu Negócio e Perfil da Empresa no Google são a mesma coisa?",
+        answer:
+          "Sim. Google Meu Negócio era o nome antigo da ferramenta, que passou a se chamar Perfil da Empresa no Google. Apesar da mudança de nome, muitas pessoas ainda pesquisam por Google Meu Negócio quando procuram informações sobre como cadastrar ou atualizar uma empresa no Google.",
+      },
+      {
+        question: "Como colocar minha empresa no Google Maps?",
+        answer:
+          "Para aparecer no Google Maps, sua empresa precisa ter um Perfil da Empresa no Google criado e configurado corretamente, com informações comerciais e localização. Dependendo do caso, o Google poderá solicitar uma etapa de verificação antes de publicar ou liberar alterações no perfil.",
+      },
+      {
+        question: "Minha empresa já aparece no Google. Preciso atualizar o cadastro?",
+        answer:
+          "Sim. Mesmo que sua empresa já apareça nas pesquisas, é importante verificar se telefone, endereço, horário, fotos, serviços e demais informações estão corretos. Um cadastro desatualizado pode dificultar o contato e gerar dúvidas para quem procura seu negócio.",
+      },
+      {
+        question: "A RCLC pode criar ou atualizar o Perfil da Empresa no Google?",
+        answer:
+          "Sim. A RCLC oferece serviços de criação, configuração, atualização e melhoria do Perfil da Empresa no Google. O trabalho pode incluir organização das informações comerciais, atualização de contatos, horários, fotos, serviços, descrição e links de comunicação, conforme as necessidades do negócio.",
+      },
+      {
+        question: "O serviço da RCLC garante que minha empresa ficará em primeiro lugar no Google?",
+        answer:
+          "Não. Nenhum profissional pode garantir uma posição específica nos resultados do Google. A RCLC trabalha para melhorar a qualidade, a organização e a apresentação do perfil da empresa, seguindo as orientações da plataforma. A posição nos resultados depende de diversos fatores e dos critérios utilizados pelo próprio Google.",
+      },
+      {
+        question: "O Perfil da Empresa no Google é gratuito?",
+        answer:
+          "Sim. A criação e a utilização do Perfil da Empresa no Google são gratuitas. Os valores cobrados pela RCLC correspondem aos serviços profissionais de criação, configuração, atualização e melhoria do cadastro, quando contratados.",
       },
       {
         question: "Como as avaliações dos clientes podem ajudar minha empresa?",
@@ -136,7 +167,8 @@ const faqSchema = {
         <h2>Como podemos ajudar sua empresa?</h2>
         <p>
           Conheça as respostas para as principais dúvidas sobre presença
-          digital, tecnologia e soluções empresariais.
+          digital, Perfil da Empresa no Google, tecnologia e soluções
+          empresariais.
         </p>
       </div>
     </section>
@@ -210,16 +242,18 @@ const faqSchema = {
       </div>
     </section>
 
-<section class="faq-more">
-  <div class="faq-container">
-    <p>
-      Quer conhecer melhor nossas soluções?
-      <a href="/servicos">Confira nossos serviços</a>
-      ou
-      <a href="/portfolio">veja alguns projetos realizados</a>.
-    </p>
-  </div>
-</section>
+    <section class="faq-more">
+      <div class="faq-container">
+        <p>
+          Quer conhecer melhor nossas soluções?
+          <a href="/servicos">Confira nossos serviços</a>
+          ou
+          <a href="/portfolio">veja alguns projetos realizados</a>.
+          Saiba também como melhorar a presença da sua empresa no
+          <a href="/perfil-da-empresa-no-google">Google e no Google Maps</a>.
+        </p>
+      </div>
+    </section>
   </main>
 
   <Footer />
@@ -501,21 +535,21 @@ const faqSchema = {
   }
 
   .faq-more p {
-  margin: 0;
-  color: #64748b;
-  font-size: 0.94rem;
-  line-height: 2;
-}
+    margin: 0;
+    color: #64748b;
+    font-size: 0.94rem;
+    line-height: 2;
+  }
 
-.faq-more a {
-  display: inline-block;
-  margin: 0 6px;
-  color: #174d78;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
- 
+  .faq-more a {
+    display: inline-block;
+    margin: 0 6px;
+    color: #174d78;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
   .faq-more a:hover {
     color: #ed8b27;
   }

@@ -4,10 +4,11 @@ import Header from "../components/Header.astro";
 import Services from "../components/Services.astro";
 import Footer from "../components/Footer.astro";
 
-const title = "Serviços – RCLC Soluções Gerenciais";
+const title =
+  "Serviços – Consultoria, Sites e Perfil da Empresa no Google | RCLC";
 
 const description =
-  "Conheça as soluções da RCLC em consultoria empresarial, sites, presença digital e soluções digitais personalizadas.";
+  "Conheça os serviços da RCLC: consultoria empresarial, criação de sites, presença digital e criação, atualização e otimização do Perfil da Empresa no Google e Google Maps.";
 ---
 
 <Layout title={title} description={description}>
@@ -15,7 +16,152 @@ const description =
 
   <main>
     <Services />
+
+    <section class="google-service">
+      <div class="container">
+        <div class="google-content">
+          <div class="google-text">
+            <p class="section-label">VISIBILIDADE NO GOOGLE</p>
+
+            <h2>Sua empresa mais presente nas pesquisas do Google e no Google Maps</h2>
+
+            <p>
+              Quando alguém procura por um produto ou serviço na sua região,
+              sua empresa precisa apresentar informações claras e atualizadas.
+              A RCLC ajuda você a criar, configurar e melhorar o Perfil da
+              Empresa no Google, também conhecido como Google Meu Negócio.
+            </p>
+
+            <p>
+              Organizamos informações comerciais, contatos, horários,
+              serviços, fotos e links para facilitar o acesso dos clientes
+              à sua empresa.
+            </p>
+
+            <a
+              href="/perfil-da-empresa-no-google"
+              class="google-button"
+            >
+              Conheça esse serviço
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="google-image">
+            <img
+              src="/images/google-destaque-rclc.png"
+              alt="Destaque da RCLC para empresas que desejam melhorar sua presença no Google"
+              loading="lazy"
+              width="1200"
+              height="900"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <Footer />
 </Layout>
+
+<style>
+  .google-service {
+    padding: 80px 20px;
+    background: #f4f7fb;
+  }
+
+  .container {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+  }
+
+  .google-content {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 55px;
+  }
+
+  .section-label {
+    margin: 0 0 14px;
+    color: #e87525;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+  }
+
+  .google-text h2 {
+    margin: 0 0 22px;
+    color: #173b63;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    line-height: 1.2;
+  }
+
+  .google-text p:not(.section-label) {
+    margin: 0 0 17px;
+    color: #4c5968;
+    font-size: 1.04rem;
+    line-height: 1.8;
+  }
+
+  .google-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    padding: 14px 23px;
+    border-radius: 7px;
+    background: #173b63;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .google-button:hover {
+    background: #e87525;
+    transform: translateY(-2px);
+  }
+
+  .google-button span {
+    font-size: 1.2rem;
+  }
+
+  .google-image {
+    width: 100%;
+  }
+
+  .google-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(20, 45, 75, 0.13);
+  }
+
+  @media (max-width: 768px) {
+    .google-service {
+      padding: 55px 20px;
+    }
+
+    .google-content {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .google-text h2 {
+      font-size: 1.85rem;
+    }
+
+    .google-text p:not(.section-label) {
+      font-size: 1rem;
+    }
+
+    .google-image {
+      max-width: 540px;
+      margin: 0 auto;
+    }
+  }
+</style>

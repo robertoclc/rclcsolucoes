@@ -1,15 +1,14 @@
 ---
-
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
 
 const title =
-  "RCLC – Soluções Gerenciais | Tecnologia e Presença Digital";
+  "RCLC – Soluções Gerenciais | Sites, Presença Digital e Google";
 
 const description =
-  "A RCLC oferece soluções gerenciais, tecnologia e presença digital para empresas que buscam organização, comunicação profissional e resultados.";
+  "A RCLC oferece consultoria empresarial, criação de sites, soluções digitais e serviços para melhorar a presença da sua empresa no Google e no Google Maps.";
 ---
 
 <Layout title={title} description={description}>
@@ -17,7 +16,147 @@ const description =
 
   <main>
     <Hero />
+
+    <section class="google-highlight">
+      <div class="container">
+        <div class="google-content">
+          <div class="google-image">
+            <img
+              src="/images/google-meu-negocio-rclc.png"
+              alt="RCLC - Soluções para destacar sua empresa nas pesquisas do Google e no Google Maps"
+              loading="lazy"
+              width="1200"
+              height="900"
+            />
+          </div>
+
+          <div class="google-text">
+            <p class="section-label">SUA EMPRESA NO GOOGLE</p>
+
+            <h2>
+              Sua empresa está preparada para ser encontrada no Google?
+            </h2>
+
+            <p>
+              Quando clientes procuram produtos e serviços na internet,
+              estar presente no Google e no Google Maps pode fazer a diferença.
+              Mas não basta apenas aparecer: é importante apresentar
+              informações corretas, contatos, horários, fotos e serviços
+              atualizados.
+            </p>
+
+            <p>
+              A RCLC oferece criação, configuração, atualização e melhoria
+              do Perfil da Empresa no Google, também conhecido como Google
+              Meu Negócio.
+            </p>
+
+            <a
+              href="/perfil-da-empresa-no-google"
+              class="google-button"
+            >
+              Conheça esse serviço
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <Footer />
 </Layout>
+
+<style>
+  .google-highlight {
+    padding: 75px 20px;
+    background: #f4f7fb;
+  }
+
+  .container {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+  }
+
+  .google-content {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 55px;
+  }
+
+  .google-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(20, 45, 75, 0.12);
+  }
+
+  .section-label {
+    margin: 0 0 14px;
+    color: #e87525;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+  }
+
+  .google-text h2 {
+    margin: 0 0 22px;
+    color: #10243f;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    line-height: 1.2;
+  }
+
+  .google-text p:not(.section-label) {
+    margin: 0 0 17px;
+    color: #637287;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .google-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    padding: 14px 23px;
+    border-radius: 7px;
+    background: #173b63;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .google-button:hover {
+    background: #e87525;
+    transform: translateY(-2px);
+  }
+
+  .google-button span {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 768px) {
+    .google-highlight {
+      padding: 55px 20px;
+    }
+
+    .google-content {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .google-image {
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .google-text h2 {
+      font-size: 1.85rem;
+    }
+  }
+</style>
