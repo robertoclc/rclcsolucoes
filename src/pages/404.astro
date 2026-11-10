@@ -1,13 +1,16 @@
-﻿---
+﻿
+---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+const title = "Página não encontrada (404) | RCLC – Soluções Gerenciais";
+
+const description =
+  "O endereço acessado não foi encontrado. Volte ao site da RCLC e conheça nossos serviços de Perfil da Empresa no Google, criação de sites e presença digital.";
 ---
 
-<Layout
-  title="Página não encontrada | RCLC – Soluções Gerenciais"
-  description="A página que você procura não foi encontrada."
->
+<Layout title={title} description={description}>
   <Header />
 
   <main class="error-page">
@@ -18,7 +21,7 @@ import Footer from "../components/Footer.astro";
 
       <p class="error-text">
         A página que você está procurando não existe ou pode ter sido
-        movida.
+        movida. Você pode voltar ao início e conhecer nossos serviços.
       </p>
 
       <a href="/" class="button">
