@@ -1,29 +1,93 @@
 <section id="sobre" class="section section-light">
-  <div class="container about">
-    <div>
+  <div class="container">
+    <div class="about-intro">
       <p class="section-label">SOBRE A RCLC</p>
 
       <h2>
-        Soluções gerenciais e digitais para transformar necessidades em
-        projetos.
+        Tecnologia e presença digital para aproximar empresas de seus clientes.
       </h2>
+
+      <p class="intro-text">
+        Acreditamos que toda empresa merece ter uma presença digital bem
+        construída, transmitir confiança e facilitar o caminho para que novos
+        clientes encontrem seus produtos e serviços.
+      </p>
     </div>
 
-    <div class="about-text">
-      <p>
-        A RCLC reúne experiência em gestão, organização e soluções digitais
-        para ajudar empresas e profissionais a transformar necessidades em
-        soluções práticas.
-      </p>
+    <div class="about-content">
+      <div class="about-image">
+        <img
+          src="/images/sobre-rclc-presenca-digital.jpg"
+          alt="Presença de empresas no Google e no Google Maps"
+          loading="lazy"
+        />
+      </div>
 
-      <p>
-        Nosso trabalho combina consultoria empresarial, presença digital,
-        materiais digitais e projetos personalizados, sempre considerando o
-        contexto e os objetivos de cada cliente.
-      </p>
+      <div class="about-text">
+        <h3>Quem somos e o que fazemos</h3>
 
-      <a href="/contato/" class="text-link">
-        Conheça a RCLC →
+        <p>
+          A RCLC – Soluções Gerenciais atua no desenvolvimento de soluções
+          digitais para empresas e profissionais que desejam fortalecer sua
+          presença na internet e melhorar a forma como se apresentam aos
+          clientes.
+        </p>
+
+        <p>
+          Trabalhamos com cadastro, configuração, atualização e melhoria do
+          Perfil da Empresa no Google, ajudando negócios a apresentarem
+          informações, serviços, fotos e contatos de maneira organizada no
+          Google e no Google Maps.
+        </p>
+
+        <p>
+          Também desenvolvemos e atualizamos sites institucionais, organizamos
+          conteúdos e integramos canais digitais, como WhatsApp, para tornar
+          o contato entre empresas e clientes mais simples e acessível.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-values">
+      <div class="value-card">
+        <span class="value-number">01</span>
+        <h3>Atendimento próximo</h3>
+        <p>
+          Cada projeto começa com a compreensão das necessidades e dos
+          objetivos de cada empresa.
+        </p>
+      </div>
+
+      <div class="value-card">
+        <span class="value-number">02</span>
+        <h3>Soluções práticas</h3>
+        <p>
+          Desenvolvemos melhorias digitais que ajudam a organizar informações
+          e facilitar a comunicação com os clientes.
+        </p>
+      </div>
+
+      <div class="value-card">
+        <span class="value-number">03</span>
+        <h3>Compromisso com qualidade</h3>
+        <p>
+          Valorizamos a clareza, a organização e a atenção aos detalhes em
+          cada trabalho realizado.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-cta">
+      <div>
+        <h3>Vamos fortalecer a presença digital da sua empresa?</h3>
+        <p>
+          Conte um pouco sobre seu negócio e descubra como a RCLC pode ajudar.
+        </p>
+      </div>
+
+      <a href="/contato" class="cta-button">
+        Fale com a RCLC
+        <span aria-hidden="true">→</span>
       </a>
     </div>
   </div>
@@ -31,10 +95,7 @@
 
 <style>
   .section {
-    min-height: 520px;
-    padding: 60px 0 50px;
-    display: flex;
-    align-items: flex-start;
+    padding: 75px 0 70px;
   }
 
   .section-light {
@@ -46,61 +107,176 @@
     margin: 0 auto;
   }
 
+  .about-intro {
+    max-width: 850px;
+    margin-bottom: 48px;
+  }
+
   .section-label {
-    margin: 0 0 12px;
+    margin: 0 0 16px;
     color: #1677d2;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  .about-intro h2 {
+    max-width: 780px;
+    margin: 0 0 20px;
+    color: #10243f;
     font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.1;
+    line-height: 1.15;
     font-weight: 700;
     letter-spacing: -0.035em;
   }
 
-  .section h2 {
+  .intro-text {
     max-width: 760px;
     margin: 0;
-    color: #10243f;
-    font-size: 1.25rem;
-    line-height: 1.35;
-    font-weight: 500;
-  }
-
-  .about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 65px;
-    align-items: start;
-  }
-
-  .about-text {
     color: #596a80;
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 55px;
+    align-items: center;
+    margin-bottom: 55px;
+  }
+
+  .about-image {
+    overflow: hidden;
+    border-radius: 16px;
+    background: #e7eef6;
+    box-shadow: 0 12px 32px rgba(16, 36, 63, 0.09);
+  }
+
+  .about-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .about-text h3 {
+    margin: 0 0 18px;
+    color: #10243f;
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .about-text p {
+    margin: 0 0 17px;
+    color: #596a80;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .about-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 55px;
+  }
+
+  .value-card {
+    padding: 27px 24px;
+    border: 1px solid #e2eaf2;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 5px 18px rgba(16, 36, 63, 0.04);
+  }
+
+  .value-number {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #1677d2;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  .value-card h3 {
+    margin: 0 0 10px;
+    color: #10243f;
+    font-size: 1.12rem;
+  }
+
+  .value-card p {
+    margin: 0;
+    color: #596a80;
+    font-size: 0.93rem;
+    line-height: 1.65;
+  }
+
+  .about-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 32px 36px;
+    border-radius: 14px;
+    background: #102f52;
+  }
+
+  .about-cta h3 {
+    margin: 0 0 8px;
+    color: #fff;
+    font-size: 1.35rem;
+    line-height: 1.3;
+  }
+
+  .about-cta p {
+    margin: 0;
+    color: #d7e4f1;
     font-size: 0.95rem;
     line-height: 1.6;
   }
 
-  .about-text p {
-    margin: 0 0 16px;
+  .cta-button {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 22px;
+    border-radius: 7px;
+    background: #f28c28;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
   }
 
-  .text-link {
-    color: #1677d2;
-    font-size: 0.9rem;
-    font-weight: 600;
-  }
-
-  .text-link:hover {
-    color: #1268b9;
+  .cta-button:hover {
+    background: #dc7718;
+    transform: translateY(-2px);
   }
 
   @media (max-width: 800px) {
     .section {
-      min-height: auto;
-      padding: 30px 0 45px;
-      display: block;
+      padding: 55px 0;
     }
 
-    .about {
+    .about-content {
       grid-template-columns: 1fr;
       gap: 30px;
+    }
+
+    .about-values {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .about-cta {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 28px 24px;
     }
   }
 
@@ -109,8 +285,20 @@
       width: min(100% - 30px, 1120px);
     }
 
-    .section-label {
+    .about-intro h2 {
       font-size: 2rem;
+    }
+
+    .intro-text {
+      font-size: 1rem;
+    }
+
+    .about-text p {
+      font-size: 0.95rem;
+    }
+
+    .about-cta h3 {
+      font-size: 1.2rem;
     }
   }
 </style>
