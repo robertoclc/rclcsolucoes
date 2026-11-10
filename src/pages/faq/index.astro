@@ -1,0 +1,580 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const title = "FAQ – Perguntas Frequentes | RCLC Soluções Gerenciais";
+
+const description =
+  "Tire suas dúvidas sobre presença digital, Perfil da Empresa no Google, criação de sites, identidade visual e soluções da RCLC para empresas.";
+
+const faqGroups = [
+  {
+    title: "Presença digital e Google",
+    description: "Entenda como fortalecer a presença da sua empresa nas pesquisas e nos canais digitais.",
+    questions: [
+      {
+        question: "Por que minha empresa precisa ter uma presença digital bem estruturada?",
+        answer:
+          "Atualmente, muitos consumidores pesquisam na internet antes de escolher uma empresa ou contratar um serviço. Uma presença digital bem estruturada facilita que sua empresa seja encontrada, transmite credibilidade e oferece informações importantes para quem deseja conhecer seus produtos ou serviços.",
+      },
+      {
+        question: "Como melhorar a presença da minha empresa no Google?",
+        answer:
+          "O primeiro passo é manter o Perfil da Empresa no Google completo e atualizado, com informações corretas, telefone, endereço, horário de funcionamento, fotos e descrição dos serviços. Também é importante acompanhar as avaliações e manter uma comunicação consistente com os clientes.",
+      },
+      {
+        question: "Por que é importante manter o Perfil da Empresa no Google atualizado?",
+        answer:
+          "Informações desatualizadas podem gerar dúvidas e até fazer com que potenciais clientes desistam de entrar em contato. Manter telefone, endereço, horários, fotos e serviços atualizados facilita a localização da empresa e melhora a experiência de quem pesquisa.",
+      },
+      {
+        question: "Como as avaliações dos clientes podem ajudar minha empresa?",
+        answer:
+          "As avaliações contribuem para a reputação digital da empresa. Comentários positivos podem transmitir confiança a novos consumidores, enquanto responder às avaliações demonstra atenção e compromisso com o atendimento.",
+      },
+    ],
+  },
+  {
+    title: "Sites e canais digitais",
+    description: "Saiba como um site e os canais de contato podem trabalhar juntos para sua empresa.",
+    questions: [
+      {
+        question: "Minha empresa precisa ter um site mesmo estando nas redes sociais?",
+        answer:
+          "Sim. As redes sociais são importantes para divulgação e relacionamento, mas um site oferece um espaço próprio para apresentar a empresa, seus serviços, diferenciais e formas de contato. Os dois canais podem trabalhar de maneira complementar.",
+      },
+      {
+        question: "Como um site pode ajudar minha empresa a conquistar clientes?",
+        answer:
+          "Um site bem estruturado apresenta informações sobre a empresa, facilita o acesso aos serviços e disponibiliza canais de contato. Também pode ampliar as possibilidades de encontrar sua empresa por meio das pesquisas no Google.",
+      },
+      {
+        question: "É possível integrar o site da empresa ao WhatsApp?",
+        answer:
+          "Sim. É possível incluir botões e links que direcionam o visitante diretamente para uma conversa no WhatsApp, facilitando o contato, o esclarecimento de dúvidas e as solicitações de orçamento.",
+      },
+    ],
+  },
+  {
+    title: "Identidade visual e comunicação",
+    description: "Veja como a apresentação visual contribui para a imagem profissional do negócio.",
+    questions: [
+      {
+        question: "Qual a importância de uma identidade visual profissional?",
+        answer:
+          "A identidade visual ajuda a construir o reconhecimento da marca e transmite uma imagem mais organizada e profissional. Ela envolve logotipo, cores, tipografia e elementos gráficos utilizados na comunicação da empresa.",
+      },
+      {
+        question: "Minha empresa já tem logotipo. Preciso atualizá-lo?",
+        answer:
+          "Nem sempre é necessário criar uma nova marca. Em alguns casos, pequenos ajustes podem melhorar a legibilidade, a aplicação em diferentes formatos e a apresentação visual. O importante é que a identidade represente adequadamente a empresa.",
+      },
+      {
+        question: "Por que é importante manter fotos, serviços e informações atualizados nos canais digitais?",
+        answer:
+          "Porque os clientes precisam encontrar informações confiáveis para tomar decisões. Fotos atualizadas, descrições claras e serviços bem apresentados ajudam a demonstrar o que a empresa oferece e facilitam o primeiro contato.",
+      },
+    ],
+  },
+  {
+    title: "Serviços e contratação da RCLC",
+    description: "Conheça as possibilidades de atendimento e como iniciar um projeto com a RCLC.",
+    questions: [
+      {
+        question: "Como a RCLC pode ajudar minha empresa?",
+        answer:
+          "A RCLC oferece soluções voltadas à melhoria da presença digital, criação e atualização de sites, organização de informações no Google, identidade visual e integração de canais de comunicação. O trabalho é direcionado às necessidades de cada negócio.",
+      },
+      {
+        question: "A RCLC atende empresas de pequeno porte?",
+        answer:
+          "Sim. As soluções podem ser direcionadas a empresas de diferentes portes, considerando suas necessidades, estrutura e objetivos. Pequenos negócios também podem se beneficiar de uma presença digital mais organizada e profissional.",
+      },
+      {
+        question: "Posso contratar apenas um serviço da RCLC?",
+        answer:
+          "Sim. É possível contratar serviços específicos, como atualização do Perfil da Empresa no Google, criação ou atualização de site e melhorias na identidade visual. Também podem ser avaliadas soluções complementares.",
+      },
+      {
+        question: "Como funciona a contratação dos serviços?",
+        answer:
+          "Inicialmente, buscamos compreender as necessidades da empresa e identificar oportunidades de melhoria. A partir dessa avaliação, apresentamos uma proposta com os serviços recomendados, etapas de implantação e respectivos valores.",
+      },
+      {
+        question: "Como posso solicitar uma proposta para minha empresa?",
+        answer:
+          "Você pode entrar em contato com a RCLC pelo WhatsApp ou pelo formulário disponível no site. Vamos entender sua necessidade e avaliar quais soluções podem contribuir para melhorar a presença digital do seu negócio.",
+      },
+    ],
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqGroups.flatMap((group) =>
+    group.questions.map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer,
+      },
+    }))
+  ),
+};
+---
+
+<Layout title={title} description={description}>
+  <Header />
+
+  <main>
+    <section class="faq-hero">
+      <div class="faq-container">
+        <h1 class="faq-eyebrow">Central de ajuda</h1>
+        <h2>Como podemos ajudar sua empresa?</h2>
+        <p>
+          Conheça as respostas para as principais dúvidas sobre presença
+          digital, tecnologia e soluções empresariais.
+        </p>
+      </div>
+    </section>
+
+    <section class="faq-content">
+      <div class="faq-container">
+        <div class="faq-intro">
+          <h2>Perguntas frequentes</h2>
+          <p>
+            Reunimos informações para ajudar você a entender melhor nossos
+            serviços e as possibilidades de melhorar a presença digital do seu
+            negócio.
+          </p>
+        </div>
+
+        <div class="faq-groups">
+          {
+            faqGroups.map((group, groupIndex) => (
+              <section class="faq-group">
+                <div class="faq-group-heading">
+                  <span class="faq-group-number">
+                    {String(groupIndex + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3>{group.title}</h3>
+                    <p>{group.description}</p>
+                  </div>
+                </div>
+
+                <div class="faq-list">
+                  {group.questions.map((item) => (
+                    <details class="faq-item">
+                      <summary>
+                        <span>{item.question}</span>
+                        <span class="faq-toggle" aria-hidden="true" />
+                      </summary>
+                      <div class="faq-answer">
+                        <p>{item.answer}</p>
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </section>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-cta">
+      <div class="faq-container faq-cta-inner">
+        <div>
+          <span class="faq-eyebrow">Vamos conversar?</span>
+          <h2>Sua empresa pode melhorar sua presença digital.</h2>
+          <p>
+            A RCLC está pronta para ajudar seu negócio a se apresentar melhor
+            na internet, organizar seus canais digitais e facilitar o contato
+            com seus clientes.
+          </p>
+        </div>
+
+        <a
+          class="faq-cta-button"
+          href="https://wa.me/5521993548498"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Fale com a RCLC pelo WhatsApp
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+<section class="faq-more">
+  <div class="faq-container">
+    <p>
+      Quer conhecer melhor nossas soluções?
+      <a href="/servicos">Confira nossos serviços</a>
+      ou
+      <a href="/portfolio">veja alguns projetos realizados</a>.
+    </p>
+  </div>
+</section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(faqSchema)}
+/>
+
+<style>
+  .faq-container {
+    width: min(1120px, calc(100% - 40px));
+    margin-inline: auto;
+  }
+
+  .faq-hero {
+    padding: 88px 0 82px;
+    background: linear-gradient(135deg, #102f50 0%, #174d78 100%);
+    color: #fff;
+    text-align: center;
+  }
+
+  .faq-eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #f6a23b;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .faq-hero h1 {
+    max-width: 800px;
+    margin: 0 auto 18px;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+    font-weight: 800;
+  }
+
+  .faq-hero h2 {
+    max-width: 760px;
+    margin: 0 auto 16px;
+    color: #eaf1f7;
+    font-size: clamp(1.45rem, 3.5vw, 2.25rem);
+    line-height: 1.25;
+    font-weight: 700;
+  }
+
+  .faq-hero p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: #e1eaf2;
+    font-size: 1.08rem;
+    line-height: 1.7;
+  }
+
+  .faq-content {
+    padding: 76px 0 88px;
+    background: #f7f9fc;
+  }
+
+  .faq-intro {
+    max-width: 720px;
+    margin: 0 auto 54px;
+    text-align: center;
+  }
+
+  .faq-intro h2 {
+    margin: 0 0 14px;
+    color: #173b5c;
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+  }
+
+  .faq-intro p {
+    margin: 0;
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .faq-groups {
+    display: grid;
+    gap: 48px;
+  }
+
+  .faq-group {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.7fr);
+    align-items: start;
+    gap: 42px;
+  }
+
+  .faq-group-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding-top: 10px;
+  }
+
+  .faq-group-number {
+    display: grid;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 10px;
+    background: #e8f0f8;
+    color: #174d78;
+    font-size: 0.9rem;
+    font-weight: 800;
+  }
+
+  .faq-group-heading h3 {
+    margin: 2px 0 9px;
+    color: #173b5c;
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+
+  .faq-group-heading p {
+    margin: 0;
+    color: #718096;
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 12px;
+  }
+
+  .faq-item {
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgb(15 45 75 / 4%);
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .faq-item[open] {
+    border-color: #c4d6e7;
+    box-shadow: 0 5px 18px rgb(15 45 75 / 7%);
+  }
+
+  .faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 21px 23px;
+    color: #24445f;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::marker {
+    content: "";
+  }
+
+  .faq-toggle {
+    position: relative;
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #edf3f8;
+  }
+
+  .faq-toggle::before,
+  .faq-toggle::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 2px;
+    border-radius: 2px;
+    background: #174d78;
+    content: "";
+    transform: translate(-50%, -50%);
+  }
+
+  .faq-toggle::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    transition: transform 0.2s ease;
+  }
+
+  .faq-item[open] .faq-toggle::after {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  .faq-answer {
+    padding: 0 23px 21px;
+  }
+
+  .faq-answer p {
+    margin: 0;
+    padding-top: 15px;
+    border-top: 1px solid #edf1f5;
+    color: #64748b;
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+
+  .faq-cta {
+    padding: 66px 0;
+    background: #edf3f8;
+  }
+
+  .faq-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 42px;
+  }
+
+  .faq-cta-inner > div {
+    max-width: 700px;
+  }
+
+  .faq-cta h2 {
+    margin: 0 0 14px;
+    color: #173b5c;
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    line-height: 1.25;
+  }
+
+  .faq-cta p {
+    margin: 0;
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .faq-cta-button {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 54px;
+    padding: 15px 23px;
+    border-radius: 8px;
+    background: #ed8b27;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .faq-cta-button:hover {
+    background: #d97818;
+    transform: translateY(-2px);
+  }
+
+  .faq-cta-button span {
+    font-size: 1.2rem;
+  }
+
+  .faq-more {
+    padding: 25px 0;
+    background: #fff;
+    text-align: center;
+  }
+
+  .faq-more p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.94rem;
+  line-height: 2;
+}
+
+.faq-more a {
+  display: inline-block;
+  margin: 0 6px;
+  color: #174d78;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+ 
+  .faq-more a:hover {
+    color: #ed8b27;
+  }
+
+  @media (max-width: 760px) {
+    .faq-hero {
+      padding: 66px 0 60px;
+    }
+
+    .faq-content {
+      padding: 58px 0 65px;
+    }
+
+    .faq-intro {
+      margin-bottom: 38px;
+    }
+
+    .faq-groups {
+      gap: 36px;
+    }
+
+    .faq-group {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .faq-group-heading {
+      padding-top: 0;
+    }
+
+    .faq-item summary {
+      padding: 18px;
+      font-size: 0.96rem;
+    }
+
+    .faq-answer {
+      padding: 0 18px 18px;
+    }
+
+    .faq-cta {
+      padding: 52px 0;
+    }
+
+    .faq-cta-inner {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .faq-cta-button {
+      width: 100%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq-item,
+    .faq-toggle::after,
+    .faq-cta-button {
+      transition: none;
+    }
+  }
+</style>
